@@ -28,6 +28,7 @@ class EmployeeController extends Controller
     {
         $request->validate([
          'name' => 'required',
+         'lastname' => 'required',
          'email' => 'required|email',
          'phone' => 'required'
         ]);
@@ -52,6 +53,7 @@ class EmployeeController extends Controller
     {
         $request->validate([
          'name' => 'required',
+         'lastname' => 'required',
          'email' => 'required|email',
          'phone' => 'required'
         ]);
