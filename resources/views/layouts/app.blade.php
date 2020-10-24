@@ -23,9 +23,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #FF4254;">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" style="font-weight: bold; color: white;" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -75,7 +75,25 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            @guest
+                @yield('content')
+            @else
+                <div class="row container">
+                    <div class="col-md-2 card">
+                        <ul class="nav flex-column list-group list-group-flush">
+                            <li class="nav-item list-group-item">
+                                <a class="nav-link" href="#">Employees</a>
+                            </li>
+                            <li class="nav-item list-group-item">
+                                <a class="nav-link" href="#">Calendar</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-10">
+                        @yield('content')
+                    </div>
+                </div>
+            @endguest
         </main>
     </div>
 </body>

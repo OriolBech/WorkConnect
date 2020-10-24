@@ -4,8 +4,7 @@
 
     <div class="table-responsive">
         <table class="table table-bordered table-condensed table-striped">
-            <thead>
-
+            <thead class="table-dark">
                 <th>ID</th>
                 <th>NAME</th>
                 <th>LASTNAME</th>
