@@ -2,26 +2,26 @@
 @section('content')
 <div class="col-md-12">
 
-    <div class="table-responsive">
-        <table class="table table-bordered table-condensed table-striped">
-            <thead class="table-dark">
-                <th>ID</th>
-                <th>NAME</th>
-                <th>LASTNAME</th>
-                <th>EMAIL</th>
-                <th>PHONE</th>
-                <th>ACTION</th>
+    <div class="bg-white">
+        <table class="table-auto">
+            <thead>
+                <th class="border px-4 py-2">ID</th>
+                <th class="border px-4 py-2">NAME</th>
+                <th class="border px-4 py-2">LASTNAME</th>
+                <th class="border px-4 py-2">EMAIL</th>
+                <th class="border px-4 py-2">PHONE</th>
+                <th class="border px-4 py-2">ACTION</th>
             </thead>
 
             <tbody>
                 @foreach($data as $row)
                 <tr>
 
-                    <td>{{$row->id }}</td>
-                    <td>{{$row->name }}</td>
-                    <td>{{$row->lastname }}</td>
-                    <td>{{$row->email }}</td>
-                    <td>{{$row->phone }}</td>
+                    <td class="border px-4 py-2">{{$row->id }}</td>
+                    <td class="border px-4 py-2">{{$row->name }}</td>
+                    <td class="border px-4 py-2">{{$row->lastname }}</td>
+                    <td class="border px-4 py-2">{{$row->email }}</td>
+                    <td class="border px-4 py-2">{{$row->phone }}</td>
 
                     <td>
                         <a href="{{ route('employees.edit', $row->id)}}" class="btn btn-primary">Edit</a>
@@ -37,6 +37,7 @@
             </tbody>
         </table>
     </div>
+        
     <div>
         <?php echo $data->render(); ?>
     </div>
