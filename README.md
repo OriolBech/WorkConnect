@@ -18,7 +18,7 @@ WorkConnect is a platform for managing employees and ensuring that employees are
   - Composer
   - PHP >= 7.3
 
-### Intallation
+### Installation
 
 First of all git clone this repository in your project folder :
   ```sh
