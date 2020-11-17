@@ -1,4 +1,4 @@
-<form action="{{ route('event.store') }}" method="post">
+<form action="{{ route('events.store') }}" method="post">
   {{ csrf_field() }}
   Task name:
   <br />

@@ -36,7 +36,7 @@ class EventsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
         Event::create($request->all());
         return redirect()->route('events.index');
     }

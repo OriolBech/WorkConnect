@@ -18,8 +18,7 @@
                 @foreach($events as $event)
                 {
                     title : '{{ $event->name }}',
-                    start : '{{ $event->task_date }}',
-                    url : '{{ route('event.edit', $event->id) }}'
+                    start : '{{ $event->event_date }}',
                 },
                 @endforeach
             ]
