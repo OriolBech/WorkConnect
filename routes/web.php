@@ -22,3 +22,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('employees','App\Http\Controllers\EmployeeController');
+
+Route::resource('events', 'App\Http\Controllers\EventsController');
